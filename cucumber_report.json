@@ -1,0 +1,422 @@
+[
+  {
+    "description": "    In order to access Home Page\n    As a User\n    I want to login into application",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login;login-with-valid-credential",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Login with valid credential",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 216921300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 688090800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I fill the form with valid credentials",
+            "match": {
+              "location": "step-definitions\\login-step.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 176775200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "I should see the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14619499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 72489500
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;user-logout",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "User Logout",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 220035099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 479229200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42947299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 14,
+            "name": "I click the logout button",
+            "match": {
+              "location": "step-definitions\\login-step.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 627239299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I should see the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6123900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33112900.000000004
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login",
+            "line": 11
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;attempt-to-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Attempt to login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 189138300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 285952599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I fill the form with \"standard_user\" and \"fail-1\"",
+            "match": {
+              "location": "step-definitions\\login-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128509099.99999999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "a credential error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14418399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 52265599
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;attempt-to-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Attempt to login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 212744100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 301374099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I fill the form with \"fail-2\" and \"secret_sauce\"",
+            "match": {
+              "location": "step-definitions\\login-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115244399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "a credential error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5338700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 31696000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;attempt-to-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Attempt to login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 210516100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 290265599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I fill the form with \"fail-3\" and \"fail-3\"",
+            "match": {
+              "location": "step-definitions\\login-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 125327099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "a credential error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6869399
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 43179199
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;user-locked-credentials",
+        "keyword": "Scenario",
+        "line": 29,
+        "name": "User locked credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 214634199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 30,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 288467500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "I fill the form with a locked credentials",
+            "match": {
+              "location": "step-definitions\\login-step.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 118826800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 32,
+            "name": "an error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6711799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 33768399
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "User Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
