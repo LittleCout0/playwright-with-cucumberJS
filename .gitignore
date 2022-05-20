@@ -63,6 +63,7 @@ node_modules/
 jspm_packages/
 reports/
 
+
 # Optional npm cache directory
 .npm
 
@@ -91,3 +92,4 @@ lerna-debug.log
 .DS_Store
 Thumbs.db
 .prettierrc
+metadata_info.json

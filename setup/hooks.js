@@ -1,32 +1,78 @@
 const playwright = require("playwright")
-const { Before, After, BeforeAll, AfterAll } = require("@cucumber/cucumber")
+const { Before, After, BeforeAll, AfterAll, setDefaultTimeout, Status } = require("@cucumber/cucumber")
+const { sample } = require("lodash")
+const fs = require("fs")
+const { version } = require("os")
+
+const DEFAULT_TIMEOUT = 30000
+const SLOW_MOTION_BROWSER = 1
+var browser_name
+setDefaultTimeout(DEFAULT_TIMEOUT)
 
 BeforeAll(async () => {
-    console.log("Launch Browser")
-    global.browser = await playwright["chromium"].launch({ headless: false })
+    _arr = ["chromium", "firefox", "webkit"]
+    browser_name = sample(_arr)
+    console.log(`Browser launched: ${browser_name.toUpperCase()}`)
+
+    global.browser = await playwright[browser_name].launch({
+        headless: false,
+        slowMo: SLOW_MOTION_BROWSER
+    })
 })
 
 
-AfterAll(async () => {
-    console.log("Close Browser")
-    await global.browser.close()
-})
-
-Before(async () => {
-    console.log("Create new context and page")
+Before(async (scenario) => {
     global.context = await global.browser.newContext()
     global.page = await global.context.newPage()
+
+    console.log(`A new context and page was created for scenario: ${scenario.pickle.name}`)
 })
 
-Before({tags: '@login'}, async () => {
+Before({ tags: '@login' }, async () => {
     const { LoginPage } = require("../page-objects/login-page")
     const lp = new LoginPage()
 
     await lp.validLogin()
 })
 
-After(async () => {
-    console.log("Close context and page")
+Before({ tags: '@shoppingCartFull' }, async () => {
+    const { InventoryPage } = require("../page-objects/inventory-page")
+    const ip = new InventoryPage()
+
+    await ip.clickAllButtonsByText("Add to Cart")
+})
+
+After(async function (scenario) {
+
+    let meta_info = {
+        "Website Application": "https://www.saucedemo.com/",
+        "App Version": "0.0.1",
+        "Test Environment": "STAGING",
+        "Browser": `${browser_name.toUpperCase()} ${browser.version()}`,
+        "Plataform": version()
+    }
+
+    // Used to configure metadata from Cucumber Report
+    let jsonString = JSON.stringify(meta_info)
+    fs.writeFile('metadata_info.json', jsonString, function (err) {
+        if (err) throw err
+    })
+
+    if (scenario.result.status === Status.FAILED) {
+        let world = this
+
+        await page.screenshot({ fullpage: true }).then(function (buffer) {
+            return world.attach(buffer, 'image/png')
+        })
+    }
+
     await global.page.close()
     await global.context.close()
+    console.log("Context and page closed")
+})
+
+
+AfterAll(async () => {
+    await global.browser.close()
+    console.log("Browser closed. Run command 'npm run report' to see detailed results")
 })

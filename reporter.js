@@ -1,18 +1,17 @@
 const reporter = require("cucumber-html-reporter")
+const metadata_info = require("./metadata_info.json")
 
 const options = {
     theme: "bootstrap",
     jsonFile: "cucumber_report.json",
     output: "reports/cucumber_report.html",
+    brandTitle: "Regression Test",
+    screenshotsDirectory: 'reports/screenshot',
+    storeScreenshots: false,
     reportSuiteAsScenario: true,
     scenarioTimestamp: true,
     launchReport: false,
-    metadata: {
-        "App Version": "2.1.1",
-        "Test Environment": "Staging"
-    },
-    Browser: "Chrome 54.0",
-    Platform: "Windows 10"
+    metadata: metadata_info,
 }
 
 reporter.generate(options)

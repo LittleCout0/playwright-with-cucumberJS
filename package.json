@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": ".\\node_modules\\.bin\\cucumber-js --require cucumber.js --require step-definitions\\**\\*.js -f json:cucumber_report.json --publish-quiet",
+    "test": ".\\node_modules\\.bin\\cucumber-js --require cucumber.js --require step-definitions\\**\\*.js -f summary -f json:cucumber_report.json --publish-quiet",
     "report": "node reporter.js"
   },
   "author": "Coutinho",
