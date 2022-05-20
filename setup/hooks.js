@@ -9,13 +9,14 @@ const SLOW_MOTION_BROWSER = 1
 var browser_name
 setDefaultTimeout(DEFAULT_TIMEOUT)
 
+//TODO: Make navigation files for Before tags hooks
 BeforeAll(async () => {
     _arr = ["chromium", "firefox", "webkit"]
     browser_name = sample(_arr)
     console.log(`Browser launched: ${browser_name.toUpperCase()}`)
 
     global.browser = await playwright[browser_name].launch({
-        headless: false,
+        headless: true,
         slowMo: SLOW_MOTION_BROWSER
     })
 })
@@ -50,6 +51,33 @@ Before({ tags: '@shoppingCart' }, async () => {
 
     await ip.clickFirstProductToAdd("Add to Cart")
     await scp.clickShoppingCartButton()
+})
+
+
+Before({ tags: '@checkout' }, async () => {
+    const { InventoryPage } = require("../page-objects/inventory-page")
+    const { ShoppingCartPage } = require("../page-objects/shopping-cart-page")
+    const ip = new InventoryPage()
+    const scp = new ShoppingCartPage()
+
+    await ip.clickFirstProductToAdd("Add to Cart")
+    await scp.clickShoppingCartButton()
+    await scp.clickCheckoutButton()
+})
+
+Before({ tags: '@checkoutOverview' }, async () => {
+    const { InventoryPage } = require("../page-objects/inventory-page")
+    const { ShoppingCartPage } = require("../page-objects/shopping-cart-page")
+    const { CheckoutPage } = require("../page-objects/checkout-page")
+    const ip = new InventoryPage()
+    const scp = new ShoppingCartPage()
+    const cp = new CheckoutPage()
+
+    await ip.clickFirstProductToAdd("Add to Cart")
+    await scp.clickShoppingCartButton()
+    await scp.clickCheckoutButton()
+    await cp.fillCheckoutFields()
+    await cp.clickContinueCheckoutButton()
 })
 
 

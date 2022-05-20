@@ -1,8 +1,8 @@
 @shoppingCartFeature @login
-Feature: Inventory
-    In order to choose products available in Inventory
+Feature: Shopping Cart
+    In order to select products to buy
     As a User
-    I want to access Inventory page
+    I want to access Shopping Cart
 
     Scenario: Check shopping cart items
         Given I am in the inventory page

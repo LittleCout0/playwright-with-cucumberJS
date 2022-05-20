@@ -6,7 +6,8 @@ const
     removeButtonText = 'Remove',
     cartTitleClass = '.title',
     cartTitleText = 'Your Cart',
-    removeElementClass = '.removed_cart_item'
+    removeElementClass = '.removed_cart_item',
+    checkoutButtonText = 'checkout'
 
 
 class ShoppingCartPage {
@@ -31,6 +32,10 @@ class ShoppingCartPage {
     async clickRemoveFirstItemFromCart() {
         let itemBtn = await page.locator('button', { hasText: removeButtonText }).first()
         await itemBtn.click()
+    }
+
+    async clickCheckoutButton(){
+        await page.locator('button', {hasText: checkoutButtonText}).click()
     }
 
     // Assertions

@@ -1,10 +1,1762 @@
 [
   {
+    "description": "    In order to buy products from shopping cart\n    As a User\n    I want to access Checkout page",
+    "elements": [
+      {
+        "description": "",
+        "id": "checkout;first-name-field-unfilled",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "First name field unfilled",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 223399200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3052733200
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 175578200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I am in the checkout page",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7653200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click in Continue button",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42018099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see an error message \"Error: First Name is required\"",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5303900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14624200
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkoutFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@checkout",
+            "line": 7
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout;last-name-field-unfilled",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Last name field unfilled",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 116074800
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 494681400
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 203540500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am in the checkout page",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7101599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I fill First Name field only",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18022600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "I click in Continue button",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56912699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "I should see an error message \"Error: Last Name is required\"",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10284700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 27434599
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkoutFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@checkout",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout;postal-code-field-unfilled",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Postal Code field unfilled",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102650000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 506523000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 169817300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I am in the checkout page",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6236999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I only unfilled Postal Code field",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 41941599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "I click in Continue button",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52277799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see an error message \"Error: Postal Code is required\"",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6537800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17574000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkoutFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@checkout",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout;checkout-overview",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Checkout overview",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178450099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 435860799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 178281100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I have a product to buy",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14110500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I go to checkout page",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 54491400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I fill all the fields corretly",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57807700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I click on Checkout button",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60997799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see the Checkout Overview page",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7331699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "the product I choose has same data from shopping cart",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9724900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "subtotal is equal to sum of all products value",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11692700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19701699
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkoutFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@shoppingCart",
+            "line": 27
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "checkout;transaction-success",
+        "keyword": "Scenario",
+        "line": 38,
+        "name": "Transaction Success",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 128866898.99999999
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 519773400.00000006
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 358564399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 39,
+            "name": "I am in the checkout overview page",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:65"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5532599
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "I click on Finish button",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40049800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 41,
+            "name": "I should see a title message",
+            "match": {
+              "location": "step-definitions\\checkout-step.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10958200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 14554600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@checkoutFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@checkoutOverview",
+            "line": 37
+          },
+          {
+            "name": "@teste1",
+            "line": 37
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "checkout",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Checkout",
+    "tags": [
+      {
+        "name": "@checkoutFeature",
+        "line": 1
+      },
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "features\\checkout.feature"
+  },
+  {
     "description": "    In order to choose products available in Inventory\n    As a User\n    I want to access Inventory page",
     "elements": [
       {
         "description": "",
+        "id": "inventory;add-products-to-shopping-cart",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Add products to shopping cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 198972099
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 462032299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12875100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I click in \"ADD TO CART\" button on any product",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 440131099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the quantity increase on shopping cart badge",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4580300
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10982199
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@inventoryFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
         "id": "inventory;remove-products-from-shopping-cart",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Remove products from shopping cart",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 128785300
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 567837599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 424042199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5974800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click in \"REMOVE\" button on any product",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 310772899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the shopping cart badge empty",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2456499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9615299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@inventoryFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@shoppingCartFull",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "inventory;sort-products-by-name-(z-a)",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "Sort products by name (Z-A)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 123828900
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 641627499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 19,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13273400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 20,
+            "name": "I choose sort products by name descending",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59535899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 21,
+            "name": "I should see the last product be the first one",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4937999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9820399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@inventoryFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "inventory;sort-products-by-value-(min-to-max)",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Sort products by value (min to max)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122842500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 470008700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8827499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I choose sort products by value (min to max)",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64742500.00000001
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see the first product be the most cheaper",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 216005100
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10722000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@inventoryFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "inventory;sort-products-by-value-(max-to-min)",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Sort products by value (max to min)",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 111170000
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 475533199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 29,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7596700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "I choose sort products by value (max to min)",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:38"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53675799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 31,
+            "name": "I should see the first product be the most expensive",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 57062200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 15849700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@inventoryFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "inventory;access-product-details",
+        "keyword": "Scenario",
+        "line": 33,
+        "name": "Access product details",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 117869699
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 533279300.00000006
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 34,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10179699
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "I click on a product name",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:46"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78229899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "I should see another page with product details",
+            "match": {
+              "location": "step-definitions\\inventory-step.js:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10935000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12543999
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@inventoryFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "inventory",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "Inventory",
+    "tags": [
+      {
+        "name": "@inventoryFeature",
+        "line": 1
+      },
+      {
+        "name": "@login",
+        "line": 1
+      }
+    ],
+    "uri": "features\\inventory.feature"
+  },
+  {
+    "description": "    In order to access Home Page\n    As a User\n    I want to login into application",
+    "elements": [
+      {
+        "description": "",
+        "id": "user-login;login-with-valid-credential",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Login with valid credential",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 127294300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 306978500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I fill the form with valid credentials",
+            "match": {
+              "location": "step-definitions\\login-step.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 184599900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should see the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9504999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8700700
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;user-logout",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "User Logout",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 102325599
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 486709399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7206800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 15,
+            "name": "I click the logout button",
+            "match": {
+              "location": "step-definitions\\login-step.js:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 591328600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "I should see the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5695800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8466600
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 12
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;attempt-to-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Attempt to login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 109250499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 337779100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I fill the form with \"standard_user\" and \"fail-1\"",
+            "match": {
+              "location": "step-definitions\\login-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131535799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "a credential error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5159400
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8131900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;attempt-to-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Attempt to login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 111465499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 303672399
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I fill the form with \"fail-2\" and \"secret_sauce\"",
+            "match": {
+              "location": "step-definitions\\login-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115861200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "a credential error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5952800
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 10458900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;attempt-to-login-with-invalid-credentials",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Attempt to login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122758900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 308716499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "I fill the form with \"fail-3\" and \"fail-3\"",
+            "match": {
+              "location": "step-definitions\\login-step.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128041599.99999999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "a credential error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4299200
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 11581799
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "user-login;user-locked-credentials",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "User locked credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 113179900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I visit the login page",
+            "match": {
+              "location": "step-definitions\\login-step.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 300714200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I fill the form with a locked credentials",
+            "match": {
+              "location": "step-definitions\\login-step.js:28"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132761900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "an error message should be displayed",
+            "match": {
+              "location": "step-definitions\\login-step.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5464700
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17730399
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginFeature",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "user-login",
+    "line": 2,
+    "keyword": "Feature",
+    "name": "User Login",
+    "tags": [
+      {
+        "name": "@loginFeature",
+        "line": 1
+      }
+    ],
+    "uri": "features\\login.feature"
+  },
+  {
+    "description": "    In order to select products to buy\n    As a User\n    I want to access Shopping Cart",
+    "elements": [
+      {
+        "description": "",
+        "id": "shopping-cart;check-shopping-cart-items",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Check shopping cart items",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 125114199
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 459444799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am in the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15220800
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click in \"ADD TO CART\" button of a product",
+            "match": {
+              "location": "step-definitions\\shopping-cart-step.js:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 148792099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I click on shopping cart button",
+            "match": {
+              "location": "step-definitions\\shopping-cart-step.js:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63296499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see the same product in shopping cart page",
+            "match": {
+              "location": "step-definitions\\shopping-cart-step.js:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17672600
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 16961899
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@shoppingCartFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "shopping-cart;continue-shopping-button",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Continue Shopping button",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 195923500
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 531036500.00000006
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 122747500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "I am in the shopping cart page",
+            "match": {
+              "location": "step-definitions\\shopping-cart-step.js:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8294200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click on Continue Shoppging button",
+            "match": {
+              "location": "step-definitions\\shopping-cart-step.js:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139947200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see the inventory page",
+            "match": {
+              "location": "step-definitions\\login-step.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5603799
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 17677500
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@shoppingCartFeature",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 1
+          },
+          {
+            "name": "@shoppingCart",
+            "line": 13
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "shopping-cart;remove-products-from-shopping-cart",
         "keyword": "Scenario",
         "line": 21,
         "name": "Remove products from shopping cart",
@@ -14,7 +1766,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 163250000
+              "duration": 104841700
             }
           },
           {
@@ -22,7 +1774,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 4603965799
+              "duration": 494563300
             }
           },
           {
@@ -30,7 +1782,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 2391860100
+              "duration": 165278200
             }
           },
           {
@@ -43,7 +1795,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8607899
+              "duration": 6878999
             }
           },
           {
@@ -56,7 +1808,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1233371299
+              "duration": 49549400
             }
           },
           {
@@ -69,7 +1821,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18528100
+              "duration": 12559599
             }
           },
           {
@@ -77,7 +1829,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 14509099
+              "duration": 12329499
             }
           }
         ],
@@ -93,19 +1845,15 @@
           {
             "name": "@shoppingCart",
             "line": 20
-          },
-          {
-            "name": "@teste1",
-            "line": 20
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "inventory",
+    "id": "shopping-cart",
     "line": 2,
     "keyword": "Feature",
-    "name": "Inventory",
+    "name": "Shopping Cart",
     "tags": [
       {
         "name": "@shoppingCartFeature",
