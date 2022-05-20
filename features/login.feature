@@ -1,3 +1,4 @@
+@loginFeature
 Feature: User Login 
     In order to access Home Page
     As a User

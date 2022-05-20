@@ -1,17 +1,18 @@
-const { expect } = require("chai")
-
 const
     titleClass = '.title',
     titlePage = 'Products',
     inventoryClass = '.inventory_item',
     inventoryItemsNamesClass = '.inventory_item_name',
     inventoryItemsValuesClass = '.inventory_item_price',
+    inventoryItemsDetailClass = '.inventory_item_desc',
     shoppingCartBadgeClass = '.shopping_cart_badge',
     dropDownSortBy = "data-test=product_sort_container",
     sortByNameAscending = 'az',
     sortByNameDescending = 'za',
     sortByMinimalValue = 'lohi',
-    sortByMaximalValue = 'hilo'
+    sortByMaximalValue = 'hilo',
+    inventoryItemDetailUniquePage = '.inventory_details_desc.large_size',
+    inventoryItemValueUniquePage = '.inventory_details_price'
 
 class InventoryPage {
 
@@ -23,6 +24,11 @@ class InventoryPage {
             await btn.click()
         }
         return await invent.count()
+    }
+
+    async clickFirstProductToAdd(textButton){
+        let item = await page.locator('button', { hasText: textButton }).first()
+        await item.click()
     }
 
     async selectOptionToSortBy(sortBy) {
@@ -53,6 +59,27 @@ class InventoryPage {
         return parseFloat(_value.replace('$', ''))
     }
 
+    async getFirstProductDetailsFromList() {
+        let firstItem = await page.locator(inventoryItemsDetailClass).first()
+        return await firstItem.textContent()
+    }
+
+    async getProductDetailsFromUniquePage() {
+        let item = await page.locator(inventoryItemDetailUniquePage)
+        return await item.textContent()
+    }
+
+    async getProductValueFromUniquePage() {
+        let item = await page.locator(inventoryItemValueUniquePage)
+        let value = await item.textContent()
+        return parseFloat(value.replace('$', ''))
+    }
+
+    async clickOnProductLink() {
+        let product = await page.locator(inventoryItemsNamesClass).first()
+        await product.click()
+    }
+
     async getAllProductsValues() {
         let _arrValues = []
         for (let i = 0; i < await page.locator(inventoryItemsValuesClass).count() - 1; i++) {
@@ -63,6 +90,7 @@ class InventoryPage {
     }
 
     // Assertions
+    
     async assertUserIsInInventoryPage() {
         let title = await page.locator(titleClass).textContent()
         expect(title).to.equal(titlePage)
@@ -92,6 +120,14 @@ class InventoryPage {
         let _arr = await this.getAllProductsValues()
         let productValue = await this.getFirstProductValueFromList()
         expect(Math.max(..._arr)).to.equal(productValue)
+    }
+
+    assertProductDetailsTextAreTheSame(firstText, secondText) {
+        expect(firstText).to.equal(secondText)
+    }
+
+    assertProductValueAreTheSame(firstValue, secondValue) {
+        expect(firstValue).to.equal(secondValue)
     }
 }
 

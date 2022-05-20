@@ -1,8 +1,6 @@
 const { Given, When, Then } = require("@cucumber/cucumber")
-const { LoginPage } = require("../page-objects/login-page")
 const { InventoryPage } = require("../page-objects/inventory-page")
 
-// const loginPage = new LoginPage()
 const inventoryPage = new InventoryPage()
 
 When('I click in {string} button on any product', async function (textButton) {
@@ -43,4 +41,18 @@ When('I choose sort products by value \\(max to min)', async function () {
 
 Then('I should see the first product be the most expensive', async function () {
     await inventoryPage.assertFirstProductHasHighestValue()
+})
+
+When('I click on a product name', async function () {
+    this.productDetails = await inventoryPage.getFirstProductDetailsFromList()
+    this.productValue = await inventoryPage.getFirstProductValueFromList()
+    await inventoryPage.clickOnProductLink()
+})
+
+Then('I should see another page with product details', async function () {
+    let productDetailsUniquePage = await inventoryPage.getProductDetailsFromUniquePage()
+    let productValueUniquePage = await inventoryPage.getProductValueFromUniquePage()
+
+    inventoryPage.assertProductDetailsTextAreTheSame(this.productDetails, productDetailsUniquePage)
+    inventoryPage.assertProductValueAreTheSame(this.productValue, productValueUniquePage)
 })

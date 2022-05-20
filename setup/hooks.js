@@ -42,6 +42,17 @@ Before({ tags: '@shoppingCartFull' }, async () => {
     await ip.clickAllButtonsByText("Add to Cart")
 })
 
+Before({ tags: '@shoppingCart' }, async () => {
+    const { InventoryPage } = require("../page-objects/inventory-page")
+    const { ShoppingCartPage } = require("../page-objects/shopping-cart-page")
+    const ip = new InventoryPage()
+    const scp = new ShoppingCartPage()
+
+    await ip.clickFirstProductToAdd("Add to Cart")
+    await scp.clickShoppingCartButton()
+})
+
+
 After(async function (scenario) {
 
     let meta_info = {

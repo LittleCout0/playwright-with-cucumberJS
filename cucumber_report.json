@@ -4,17 +4,17 @@
     "elements": [
       {
         "description": "",
-        "id": "inventory;sort-products-by-value-(max-to-min)",
+        "id": "inventory;remove-products-from-shopping-cart",
         "keyword": "Scenario",
-        "line": 29,
-        "name": "Sort products by value (max to min)",
+        "line": 21,
+        "name": "Remove products from shopping cart",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 240681899
+              "duration": 163250000
             }
           },
           {
@@ -22,46 +22,54 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 544902599
+              "duration": 4603965799
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2391860100
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 30,
-            "name": "I am in the inventory page",
+            "line": 22,
+            "name": "I am in the shopping cart page",
             "match": {
-              "location": "step-definitions\\login-step.js:36"
+              "location": "step-definitions\\shopping-cart-step.js:9"
             },
             "result": {
               "status": "passed",
-              "duration": 25816599
+              "duration": 8607899
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 31,
-            "name": "I choose sort products by value (max to min)",
+            "line": 23,
+            "name": "I click on Remove button",
             "match": {
-              "location": "step-definitions\\inventory-step.js:40"
+              "location": "step-definitions\\shopping-cart-step.js:36"
             },
             "result": {
               "status": "passed",
-              "duration": 59730699
+              "duration": 1233371299
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 32,
-            "name": "I should see the first product be the most expensive",
+            "line": 24,
+            "name": "I should see the shopping cart page empty",
             "match": {
-              "location": "step-definitions\\inventory-step.js:44"
+              "location": "step-definitions\\shopping-cart-step.js:40"
             },
             "result": {
               "status": "passed",
-              "duration": 44075199
+              "duration": 18528100
             }
           },
           {
@@ -69,13 +77,13 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 46959699
+              "duration": 14509099
             }
           }
         ],
         "tags": [
           {
-            "name": "@inventory",
+            "name": "@shoppingCartFeature",
             "line": 1
           },
           {
@@ -83,8 +91,12 @@
             "line": 1
           },
           {
+            "name": "@shoppingCart",
+            "line": 20
+          },
+          {
             "name": "@teste1",
-            "line": 28
+            "line": 20
           }
         ],
         "type": "scenario"
@@ -96,7 +108,7 @@
     "name": "Inventory",
     "tags": [
       {
-        "name": "@inventory",
+        "name": "@shoppingCartFeature",
         "line": 1
       },
       {
@@ -104,6 +116,6 @@
         "line": 1
       }
     ],
-    "uri": "features\\inventory.feature"
+    "uri": "features\\shopping-cart.feature"
   }
 ]

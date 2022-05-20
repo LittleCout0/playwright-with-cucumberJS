@@ -1,4 +1,4 @@
-@inventory @login
+@inventoryFeature @login
 Feature: Inventory
     In order to choose products available in Inventory
     As a User
