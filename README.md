@@ -5,7 +5,7 @@ Scenarios for the Website [SauceLab Demo](https://www.saucedemo.com/)
 ##
 ### Requirements - Windows (10 or +)
 
-Install latest [**NodeJS**](https://nodejs.org/en/download/) 
+Install latest [**NodeJS**](https://nodejs.org/en/download/)
 >**_Note_**: Check ``Add to PATH`` option during the installation
 
 Install latest [**GIT**](https://git-scm.com/download/win) to clone the repository
@@ -13,11 +13,14 @@ Install latest [**GIT**](https://git-scm.com/download/win) to clone the reposito
 ##
 ### Git Clone and Libs Install
 
-Run this command to clone and install all dependencies: ``git clone https://gitlab.com/Coutinho_W/playwright-with-cucumber.git && cd playwright-with-cucumber && npm i``\
+In your terminal, run this command to clone and install all dependencies
+````bash
+git clone https://gitlab.com/Coutinho_W/playwright-with-cucumber.git && cd playwright-with-cucumber && npm i
+````
 
-To run all tests use the command: ``npm run test``
-To run a specific scenario or feature, use a tag parameter: ``npm run test -- -t @example_tag``
-List of tags: 
+To run all tests use the command: ``npm run test``\
+To run a specific scenario or feature, use a tag parameter: ``npm run test -- -t @example_tag``\
+List of tags 
 
 Feature         | Tag
 -------------   | -------------
@@ -26,9 +29,12 @@ Inventory       | @inventoryFeature
 Shopping Cart   | @shoppingCartFeature 
 Checkout        | @checkoutFeature
        
-To see the test report run the command ``npm run report && start reports/cucumber_report.html``
+Run the command below and the tests report will be available in your browser.
 
-Front-End tests reports are available on browser.
+````bash
+npm run report && start reports/cucumber_report.html
+````
+
 ##
 #### Git Repository
 
