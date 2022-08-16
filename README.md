@@ -38,7 +38,7 @@ npm run report && start reports/cucumber_report.html
 ##
 #### Git Repository
 
-GitLab: [*Playwright with Cucumber*](https://gitlab.com/Coutinho_W/playwright-with-cucumber) 
+GitHub: [*Playwright with Cucumber*](https://github.com/LittleCout0/playwright-with-cucumber) 
 
 ##
 #### Libs
