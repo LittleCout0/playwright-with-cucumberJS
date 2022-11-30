@@ -62,14 +62,14 @@ Then('subtotal is equal to sum of all products value', async function () {
     await checkoutPage.assertSubtTotalEqualToSumProductsValue()
 })
 
-Given('I am in the checkout overview page', async function(){
+Given('I am in the checkout overview page', async function () {
     await checkoutPage.assertIsCheckoutOverviewPage()
 })
 
-When('I click on Finish button', async function(){
+When('I click on Finish button', async function () {
     await checkoutPage.clickFinishButton()
 })
 
-Then('I should see a title message', async function(){
+Then('I should see a title message', async function () {
     await checkoutPage.assertSuccessText()
 })

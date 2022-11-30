@@ -15,7 +15,7 @@ Install latest [**GIT**](https://git-scm.com/download/win) to clone the reposito
 
 In your terminal, run this command to clone and install all dependencies
 ````bash
-git clone https://gitlab.com/Coutinho_W/playwright-with-cucumber.git && cd playwright-with-cucumber && npm i
+git clone https://github.com/LittleCout0/playwright-with-cucumber.git && cd playwright-with-cucumber && npm i
 ````
 
 To run all tests use the command: ``npm run test``\

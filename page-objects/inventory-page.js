@@ -1,133 +1,134 @@
-const
-    titleClass = '.title',
-    titlePage = 'Products',
-    inventoryClass = '.inventory_item',
-    inventoryItemsNamesClass = '.inventory_item_name',
-    inventoryItemsValuesClass = '.inventory_item_price',
-    inventoryItemsDetailClass = '.inventory_item_desc',
-    shoppingCartBadgeClass = '.shopping_cart_badge',
-    dropDownSortBy = "data-test=product_sort_container",
-    sortByNameAscending = 'az',
-    sortByNameDescending = 'za',
-    sortByMinimalValue = 'lohi',
-    sortByMaximalValue = 'hilo',
-    inventoryItemDetailUniquePage = '.inventory_details_desc.large_size',
-    inventoryItemValueUniquePage = '.inventory_details_price'
-
 class InventoryPage {
+    get inventory() {
+        return {
+            title: '.title',
+            titleTxt: 'Products',
+            item: '.inventory_item',
+            itemName: '.inventory_item_name',
+            itemPrice: '.inventory_item_price',
+            itemDetail: '.inventory_item_desc',
+            shoppingCartBadge: '.shopping_cart_badge',
+            dropDownSortOptions: 'data-test=product_sort_container',
+            itemDetailLargeDesc: '.inventory_details_desc.large_size',
+            itemDetailPrice: '.inventory_details_price'
+        }
+    }
+
+    get sortBy() {
+        return {
+            nameAscending: 'az',
+            nameDescending: 'za',
+            minimalValue: 'lohi',
+            maximalValue: 'hilo',
+        }
+    }
+
 
     async clickAllButtonsByText(textButton) {
-        let invent = await page.locator(inventoryClass)
+        let inventory = await page.locator(this.inventory.item)
 
-        for (let i = 0; i < await invent.count(); i++) {
+        for (let i = 0; i < await inventory.count(); i++) {
             let btn = await page.locator('button', { hasText: textButton }).first()
             await btn.click()
         }
-        return await invent.count()
+        return await inventory.count()
     }
 
-    async clickFirstProductToAdd(textButton){
-        let item = await page.locator('button', { hasText: textButton }).first()
-        await item.click()
+    async clickFirstProductToAdd(textButton) {
+        await page.locator('button', { hasText: textButton }).first().click()
     }
 
     async selectOptionToSortBy(sortBy) {
-        let dropDown = await page.$(dropDownSortBy)
-
-        if (sortBy === 'nameDesc') {
-            await dropDown?.selectOption(sortByNameDescending)
-        }
-        else if (sortBy === 'minValue') {
-            await dropDown?.selectOption(sortByMinimalValue)
-        }
-        else if (sortBy === 'maxValue') {
-            await dropDown?.selectOption(sortByMaximalValue)
-        }
-        else {
-            await dropDown?.selectOption(sortByNameAscending)
+        switch (sortBy) {
+            case 'nameDesc':
+                await page.locator(this.inventory.dropDownSortOptions).selectOption(this.sortBy.nameDescending)
+                break
+            case 'minValue':
+                await page.locator(this.inventory.dropDownSortOptions).selectOption(this.sortBy.minimalValue)
+                break
+            case 'maxValue':
+                await page.locator(this.inventory.dropDownSortOptions).selectOption(this.sortBy.maximalValue)
+                break
+            default:
+                await page.locator(this.inventory.dropDownSortOptions).selectOption(this.sortBy.nameAscending)
+                break
         }
     }
 
     async getFirstProductNameFromList() {
-        let firstItem = await page.locator(inventoryItemsNamesClass).first()
-        return await firstItem.textContent()
+        return await page.locator(this.inventory.itemName).first().textContent()
     }
 
     async getFirstProductValueFromList() {
-        let firstItem = await page.locator(inventoryItemsValuesClass).first()
-        let _value = await firstItem.textContent()
-        return parseFloat(_value.replace('$', ''))
+        let itemValue = await page.locator(this.inventory.itemPrice).first().textContent()
+        return parseFloat(itemValue.replace('$', ''))
     }
 
     async getFirstProductDetailsFromList() {
-        let firstItem = await page.locator(inventoryItemsDetailClass).first()
-        return await firstItem.textContent()
+        return await page.locator(this.inventory.itemDetail).first().textContent()
     }
 
     async getProductDetailsFromUniquePage() {
-        let item = await page.locator(inventoryItemDetailUniquePage)
-        return await item.textContent()
+        return await page.locator(this.inventory.itemDetailLargeDesc).textContent()
     }
 
     async getProductValueFromUniquePage() {
-        let item = await page.locator(inventoryItemValueUniquePage)
-        let value = await item.textContent()
-        return parseFloat(value.replace('$', ''))
+        let itemValue = await page.locator(this.inventory.itemDetailPrice).textContent()
+        return parseFloat(itemValue.replace('$', ''))
     }
 
     async clickOnProductLink() {
-        let product = await page.locator(inventoryItemsNamesClass).first()
-        await product.click()
+        await page.locator(this.inventory.itemName).first().click()
     }
 
     async getAllProductsValues() {
         let _arrValues = []
-        for (let i = 0; i < await page.locator(inventoryItemsValuesClass).count() - 1; i++) {
-            let _value = await page.locator(inventoryItemsValuesClass).nth(i).textContent()
+        for (let i = 0; i < await page.locator(this.inventory.itemPrice).count() - 1; i++) {
+            let _value = await page.locator(this.inventory.itemPrice).nth(i).textContent()
             _arrValues.push(parseFloat(_value.replace('$', '')))
         }
         return _arrValues
     }
 
     // Assertions
-    
+
     async assertUserIsInInventoryPage() {
-        let title = await page.locator(titleClass).textContent()
-        expect(title).to.equal(titlePage)
+        let title = await page.locator(this.inventory.title).textContent()
+        expect(title, `Title from Inventory Page should be "${this.inventory.titleTxt}"`).to.equal(this.inventory.titleTxt)
     }
 
     async assertShoppingCartQuantity(quantity) {
-        let shoppingCartBadge = await page.locator(shoppingCartBadgeClass).textContent()
-        expect(parseInt(shoppingCartBadge)).to.equal(quantity)
+        let shoppingCartQtt = await page.locator(this.inventory.shoppingCartBadge).textContent()
+        expect(parseInt(shoppingCartQtt), `Quantity of items in cart should be ${quantity}`).to.equal(quantity)
     }
 
     async assertShoppingCartQuantityIsEmpty() {
-        let isShoppingCartBadgeVisible = await page.locator(shoppingCartBadgeClass).isVisible()
-        expect(isShoppingCartBadgeVisible).to.equal(false)
+        let isShoppingCartBadgeVisible = await page.locator(this.inventory.shoppingCartBadge).isVisible()
+        expect(isShoppingCartBadgeVisible, "Cart quantity badge should not be visible").to.equal(false)
     }
 
     assertDifferenceBetweenProducts(firstProduct, secondProduct) {
-        expect(firstProduct).to.not.equal(secondProduct)
+        expect(firstProduct, "Products should not be equal").to.not.equal(secondProduct)
     }
 
     async assertFirstProductHasLowerValue() {
         let _arr = await this.getAllProductsValues()
         let productValue = await this.getFirstProductValueFromList()
-        expect(Math.min(..._arr)).to.equal(productValue)
+        expect(Math.min(..._arr), "First product in list should have lowest price").to.equal(productValue)
     }
 
     async assertFirstProductHasHighestValue() {
         let _arr = await this.getAllProductsValues()
         let productValue = await this.getFirstProductValueFromList()
-        expect(Math.max(..._arr)).to.equal(productValue)
+        expect(Math.max(..._arr), "First product in list should have highest price").to.equal(productValue)
     }
 
     assertProductDetailsTextAreTheSame(firstText, secondText) {
-        expect(firstText).to.equal(secondText)
+        expect(firstText, "Detail text should be the same").to.equal(secondText)
     }
 
     assertProductValueAreTheSame(firstValue, secondValue) {
-        expect(firstValue).to.equal(secondValue)
+        expect(firstValue, "Values should be the same").to.equal(secondValue)
     }
 }
 

@@ -26,7 +26,7 @@ Before(async (scenario) => {
     global.context = await global.browser.newContext()
     global.page = await global.context.newPage()
 
-    console.log(`A new context and page was created for scenario: ${scenario.pickle.name}`)
+    console.log(`Starting scenario: ${scenario.pickle.name}`)
 })
 
 Before({ tags: '@login' }, async () => {
@@ -85,13 +85,13 @@ After(async function (scenario) {
 
     let meta_info = {
         "Website Application": "https://www.saucedemo.com/",
-        "App Version": "0.0.1",
+        "App Version": "1.0.0",
         "Test Environment": "STAGING",
         "Browser": `${browser_name.toUpperCase()} ${browser.version()}`,
         "Plataform": version()
     }
 
-    // Used to configure metadata from Cucumber Report
+    // Used to configure metadata for Cucumber Report
     let jsonString = JSON.stringify(meta_info)
     fs.writeFile('metadata_info.json', jsonString, function (err) {
         if (err) throw err
@@ -107,11 +107,10 @@ After(async function (scenario) {
 
     await global.page.close()
     await global.context.close()
-    console.log("Context and page closed")
 })
 
 
 AfterAll(async () => {
     await global.browser.close()
-    console.log("Browser closed. Run command 'npm run report' to see detailed results")
+    console.log("\nBrowser closed. Run command 'npm run report' to see detailed results")
 })

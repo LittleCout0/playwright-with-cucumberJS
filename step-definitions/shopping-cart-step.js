@@ -1,4 +1,4 @@
-const { Given, When, Then } = require('@cucumber/cucumber')
+const { Given, When, Then, BeforeAll } = require('@cucumber/cucumber')
 const { ShoppingCartPage } = require('../page-objects/shopping-cart-page')
 const { InventoryPage } = require("../page-objects/inventory-page")
 
@@ -25,8 +25,8 @@ Then('I should see the same product in shopping cart page', async function () {
     let productValueCart = await cartPage.getProductValueFromShoppingCart()
     let productDetailCart = await cartPage.getProductDetailFromShoppingCart()
 
-    await inventoryPage.assertProductValueAreTheSame(this.productValueInventory, productValueCart)
-    await inventoryPage.assertProductDetailsTextAreTheSame(this.productDetailInventory, productDetailCart)
+    inventoryPage.assertProductValueAreTheSame(this.productValueInventory, productValueCart)
+    inventoryPage.assertProductDetailsTextAreTheSame(this.productDetailInventory, productDetailCart)
 })
 
 When('I click on Continue Shoppging button', async function () {

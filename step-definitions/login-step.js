@@ -22,7 +22,7 @@ When(/^I fill the form with "([^"]*)" and "([^"]*)"$/, async function (username,
 })
 
 Then('a credential error message should be displayed', async function () {
-    await loginPage.assertLoginErrorMessage(error_type = 'failedLogin')
+    await loginPage.assertLoginErrorMessage(errorType = 'failedLogin')
 })
 
 When('I fill the form with a locked credentials', async function () {
@@ -30,7 +30,7 @@ When('I fill the form with a locked credentials', async function () {
 })
 
 Then('an error message should be displayed', async function () {
-    await loginPage.assertLoginErrorMessage(error_type = 'lockCredentials')
+    await loginPage.assertLoginErrorMessage(errorType = 'lockCredentials')
 })
 
 Given('I am in the inventory page', async function () {
@@ -42,5 +42,5 @@ When('I click the logout button', async function () {
 })
 
 Then('I should see the login page', async function () {
-   await loginPage.assertIsInLoginPage()
+    await loginPage.assertIsInLoginPage()
 })
