@@ -11,7 +11,7 @@ Install latest [**NodeJS**](https://nodejs.org/en/download/)
 Install latest [**GIT**](https://git-scm.com/download/win) to clone the repository
 
 ##
-### Git Clone and Libs Install
+### Clone the Repository and Install Packages
 
 In your terminal, run this command to clone and install all dependencies
 ````bash
@@ -36,12 +36,12 @@ npm run report && start reports/cucumber_report.html
 ````
 
 ##
-#### Git Repository
+#### Repository
 
 GitHub: [*Playwright with Cucumber*](https://github.com/LittleCout0/playwright-with-cucumber) 
 
 ##
-#### Libs
+#### Packages
 
 * [Playwright](https://playwright.dev/docs/library) - Webdriver Library
 * [Cucumber](https://www.npmjs.com/package/@cucumber/cucumber) - BDD Framework
