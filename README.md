@@ -15,7 +15,7 @@ Install latest [**GIT**](https://git-scm.com/download/win) to clone the reposito
 
 In your terminal, run this command to clone and install all dependencies
 ````bash
-git clone https://github.com/LittleCout0/playwright-with-cucumber.git && cd playwright-with-cucumber && npm i
+git clone https://github.com/LittleCout0/playwright-with-cucumberJS.git && cd playwright-with-cucumberJS && npm i
 ````
 
 To run all tests use the command: ``npm run test``\
@@ -38,7 +38,7 @@ npm run report && start reports/cucumber_report.html
 ##
 #### Repository
 
-GitHub: [*Playwright with Cucumber*](https://github.com/LittleCout0/playwright-with-cucumber) 
+GitHub: [*Playwright with Cucumber*](https://github.com/LittleCout0/playwright-with-cucumberJS) 
 
 ##
 #### Packages
